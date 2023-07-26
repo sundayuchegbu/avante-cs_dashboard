@@ -3,30 +3,13 @@ import TextField from "@mui/material/TextField";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../../services/index/user";
 import { userActions } from "../../../store/reducers/usersReducer";
 import { useEffect } from "react";
 import { Stack } from "@mui/material";
 import Container from "@material-ui/core/Container";
-// function Copyright(props) {
-//   return (
-//     <Typography
-//       variant="body2"
-//       color="text.secondary"
-//       align="center"
-//       {...props}
-//     >
-//       {"Copyright © "}
-//       <Link color="inherit" href="https://mui.com/">
-//         Avante-cs{" "}
-//       </Link>{" "}
-//       {new Date().getFullYear()}
-//       {"."}
-//     </Typography>
-//   );
-// }
+import { toast } from "react-hot-toast";
 
 export const SignIn = () => {
   const dispatch = useDispatch();
@@ -41,6 +24,7 @@ export const SignIn = () => {
       console.log(data);
       dispatch(userActions.setUserInfo(data));
       localStorage.setItem("account", JSON.stringify(data));
+      toast.success("Message Submitted Successfully...");
     },
     onError: (error) => {
       toast.error(error.message);

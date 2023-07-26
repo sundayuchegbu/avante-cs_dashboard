@@ -75,15 +75,16 @@ export default function BlogGraph() {
       <Grid item xs={12} sm={7} md={7}>
         <Card component={Paper}>
           <CardContent>
-            <Typography variant='h6' className={classes.cardTitle} align='left'>
+            <Typography variant="h6" className={classes.cardTitle} align="left">
               User Overviews
             </Typography>
           </CardContent>
           <Divider />
           <CardContent>
             <canvas
-              id='userOverViewGraph'
-              className={classes.generalGraph}></canvas>
+              id="userOverViewGraph"
+              className={classes.generalGraph}
+            ></canvas>
           </CardContent>
         </Card>
       </Grid>
@@ -91,15 +92,16 @@ export default function BlogGraph() {
       <Grid item xs={12} sm={5} md={5}>
         <Card component={Paper}>
           <CardContent>
-            <Typography variant='h6' className={classes.cardTitle} align='left'>
+            <Typography variant="h6" className={classes.cardTitle} align="left">
               Used by graph
             </Typography>
           </CardContent>
           <Divider />
           <CardContent>
             <canvas
-              id='deviceOverViewGraph'
-              className={classes.generalGraph}></canvas>
+              id="deviceOverViewGraph"
+              className={classes.generalGraph}
+            ></canvas>
           </CardContent>
         </Card>
       </Grid>

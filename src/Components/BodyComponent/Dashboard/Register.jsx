@@ -3,7 +3,7 @@ import TextField from "@mui/material/TextField";
 import { useForm } from "react-hook-form";
 import { Redirect } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../../services/index/user";
 import { userActions } from "../../../store/reducers/usersReducer";
@@ -22,8 +22,8 @@ export const SignUp = () => {
       return signup({ name, email, password });
     },
     onSuccess: (data) => {
-      dispatch(userActions.setUserInfo(data));
       toast.success("User registered successfully");
+      dispatch(userActions.setUserInfo(data));
       history.push("/");
     },
     onError: (error) => {

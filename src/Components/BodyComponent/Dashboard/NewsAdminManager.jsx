@@ -25,7 +25,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { toast } from "react-hot-toast";
 
-const Base_Url = "http://localhost:5000";
+const Base_Url = "https://avante-css.onrender.com";
 const GET_POST = "/api/v1/posts";
 const CREATE_POST = "/api/v1/post";
 const UPDATE_POST = "/api/v1/post/";

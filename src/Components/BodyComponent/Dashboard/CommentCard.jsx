@@ -7,7 +7,7 @@ function CommentCard() {
 
   useEffect(() => {
     // Fetch comments from API
-    fetch("http://localhost:5000/api/v1/comments")
+    fetch("https://avante-css.onrender.com/api/v1/comments")
       .then((response) => response.json())
       .then((data) => setComments(data))
       .catch((error) => console.log(error));
